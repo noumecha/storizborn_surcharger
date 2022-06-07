@@ -1,0 +1,6 @@
+services:
+  storizborn_surcharger.event_subscriber:
+    class: Drupal\storizborn_surcharger\EventSubscriber\StorizbornSurchargerSubscriber
+    arguments: ['@messenger']
+    tags:
+      - { name: event_subscriber }

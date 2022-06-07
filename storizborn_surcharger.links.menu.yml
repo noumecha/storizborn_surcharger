@@ -1,0 +1,6 @@
+storizborn_surcharger.settings_form:
+  title: storizborn_surcharger
+  description: Configure storizborn_surcharger.
+  parent: system.admin_config_system
+  route_name: storizborn_surcharger.settings_form
+  weight: 10

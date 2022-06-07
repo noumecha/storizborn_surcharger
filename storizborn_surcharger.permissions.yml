@@ -1,0 +1,4 @@
+administer storizborn_surcharger configuration:
+  title: 'Administer storizborn_surcharger configuration'
+  description: 'Optional description.'
+  restrict access: true

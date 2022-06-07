@@ -1,0 +1,18 @@
+{
+    "name": "noumecha/storizborn_surcharger",
+    "description": "simple module for surcharge some site item",
+    "type": "drupal-module",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Noumecha\\StorizbornSurcharger\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "noumecha",
+            "email": "noumechaivan@gmail.com"
+        }
+    ],
+    "require": {}
+}

@@ -1,7 +1,7 @@
 {
     "name": "noumecha/storizborn_surcharger",
     "description": "simple module for surcharge some site item",
-    "type": "drupal-module",
+    "type": "drupal-module-custom",
     "license": "MIT",
     "autoload": {
         "psr-4": {

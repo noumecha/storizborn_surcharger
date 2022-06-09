@@ -18,23 +18,7 @@ function storizborn_surcharger_preprocess_block__aggregator(&$vars){
   $vars['items'] = $vars['elements']['content']['list']['#items'];
 
   $vars['list']['#theme'] = 'block__aggregator';
-  $vars['list']['#attributes'] = [
-    'class' => [
-      'sn-bloc'
-    ]
-  ];
-  $vars['items']['#attributes'] = [
-    'type' => [
-      'nav-link'
-    ]
-  ];
-  $hooks['block__aggregator'] = [
-    'render element' => 'element',
-    'preprocess functions' => [
-      'template_preprocess_block__aggregator'
-    ],
-    'file' => 'fast_models.theme.inc'
-  ];
+  
 	dump($vars['list']);
 
 }

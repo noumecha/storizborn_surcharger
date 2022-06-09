@@ -9,6 +9,22 @@
  * @see https://www.drupal.org/node/2217931
  */
 /**
+ * 
+ * implements hook_theme()
+ * 
+ */
+function storizborn_surcharger_theme() {
+  // pre-formatage pour les flux rss
+  $hooks['storizborn_surcharger_aggregator'] = [
+    'render element' => 'element',
+    'preprocess functions' => [
+      'template_preprocess_storizborn_surcharger_aggregator'
+    ],
+    'file' => 'storizborn_surcharger.theme.inc'
+  ];
+  return $hooks;
+}
+/**
  * implement hook_preprocess_HOOK
  */
 
@@ -21,15 +37,4 @@ function storizborn_surcharger_preprocess_block__aggregator(&$vars){
 
 	dump($vars['list']);
 
-}
-function storizborn_surcharger_theme() {
-  // pre-formatage pour les flux rss
-  $hooks['storizborn_surcharger_aggregator'] = [
-    'render element' => 'element',
-    'preprocess functions' => [
-      'template_preprocess_storizborn_surcharger_aggregator'
-    ],
-    'file' => 'storizborn_surcharger.theme.inc'
-  ];
-  return $hooks;
 }

@@ -12,6 +12,13 @@
  * implement hook_preprocess_HOOK
  */
 
-function storizborn_surcharger_preprocess_block__aggregator(&$vars){
-	dump($vars);
+function storizborn_surcharger_preprocess_block__aggregator(){
+   // surcharge des élément pour le template
+   $hooks['storizborn_surcharger_agregator_theme'] = [
+    'render element' => 'element',
+    'preprocess functions' => [
+      'template_preprocess_storizborn_surcharger_agregator_theme'
+    ],
+    'file' => 'stroizborn_surcharger.theme.inc'
+  ];
 }

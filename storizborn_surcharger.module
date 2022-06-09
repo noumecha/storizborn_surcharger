@@ -24,7 +24,7 @@ function storizborn_surcharger_preprocess_block__aggregator(&$vars){
     ]
   ];
   $vars['items']['#attributes'] = [
-    'class' => [
+    'type' => [
       'nav-link'
     ]
   ];

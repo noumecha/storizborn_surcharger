@@ -18,6 +18,9 @@ function storizborn_surcharger_preprocess_block__aggregator(&$vars){
 
   if (isset($vars['base_plugin_id']) && $vars['base_plugin_id'] == 'aggregator_feed_block' )
   {
+    $vars['list'] = $vars['elements']['content']['list'];
+    $vars['items'] = $vars['list']['#items'];
+    
     $vars['list']['#theme'] = 'storizborn_surcharger_aggregator';
     
     dump($vars['list']);

@@ -13,17 +13,8 @@
  */
 
 function storizborn_surcharger_preprocess_block__aggregator(&$vars){
-  
-  /*$hooks['storizborn_surcharger_agregator_theme'] = [
-    'render element' => 'element',
-    'preprocess functions' => [
-      'template_preprocess_storizborn_surcharger_agregator_theme'
-    ],
-    'file' => 'stroizborn_surcharger.theme.inc'
-  ];*/
-
   // surcharge des élément pour le template
-
+  $vars['items'] = $vars['element']['#items'];
 	dump($vars);
 
 }

@@ -8,6 +8,18 @@
  * This file is no longer required in Drupal 8.
  * @see https://www.drupal.org/node/2217931
  */
+
+
+/**
+ * implement hook_preprocess_HOOK
+ */
+
+function storizborn_surcharger_preprocess_block__aggregator(&$vars){
+  //$vars['list'] = $vars['elements']['content']['list'];
+  //$vars['items'] = $vars['elements']['content']['list']['#items'];
+
+  dump($vars);
+}
 /**
  * 
  * implements hook_theme()
@@ -23,14 +35,4 @@ function storizborn_surcharger_theme() {
     'file' => 'storizborn_surcharger.theme.inc'
   ];
   return $hooks;
-}
-/**
- * implement hook_preprocess_HOOK
- */
-
-function storizborn_surcharger_preprocess_block__aggregator(&$vars){
-  //$vars['list'] = $vars['elements']['content']['list'];
-  //$vars['items'] = $vars['elements']['content']['list']['#items'];
-
-  dump($vars);
 }

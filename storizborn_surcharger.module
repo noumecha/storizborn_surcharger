@@ -17,8 +17,19 @@ function storizborn_surcharger_preprocess_block__aggregator(&$vars){
   $vars['list'] = $vars['elements']['content']['list'];
   $vars['items'] = $vars['elements']['content']['list']['#items'];
 
-  $vars['list']['#theme'] = 'block__aggregator';
-  
+  $vars['list']['#theme'] = 'storizborn_surcharger_aggregator';
+
 	dump($vars['list']);
 
+}
+function storizborn_surcharger_theme() {
+  // pre-formatage et template pour le menu.
+  $hooks['storizborn_surcharger_aggregator'] = [
+    'render element' => 'element',
+    'preprocess functions' => [
+      'template_preprocess_storizborn_surcharger_aggregator'
+    ],
+    'file' => 'storizborn_surcharger.theme.inc'
+  ];
+  return $hooks;
 }

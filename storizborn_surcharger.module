@@ -14,7 +14,8 @@
 
 function storizborn_surcharger_preprocess_block__aggregator(&$vars){
   // surcharge des élément pour le template
-  $vars['items'] = $vars['element']['#items'];
-	dump($vars);
+  $vars['list'] = $vars['element']['content']['list'];
+  $vars['items'] = $vars['element']['content']['list']['#items'];
+	dump($vars['list']);
 
 }

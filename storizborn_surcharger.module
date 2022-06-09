@@ -9,17 +9,9 @@
  * @see https://www.drupal.org/node/2217931
  */
 /**
- * 
- * Implements hook_theme() methods.
+ * implement hook_preprocess_HOOK
  */
-function storizborn_surcharger_theme() 
-{
-// hook for rss menu list items
-  $hooks['layoutfield_rss_menu_list'] = [
-    'render element' => 'element',
-    'preprocess functions' => [
-      'template_preprocess_layoutfield_rss_menu_list'
-    ],
-    'file' => 'storizborn_surcharger.theme.inc'
-  ];
+
+function storizborn_surcharger_preprocess_block__aggregator(&$vars){
+	dump($vars);
 }

@@ -23,7 +23,7 @@ function storizborn_surcharger_preprocess_block__aggregator(&$vars){
 
 }
 function storizborn_surcharger_theme() {
-  // pre-formatage et template pour le menu.
+  // pre-formatage pour les flux rss
   $hooks['storizborn_surcharger_aggregator'] = [
     'render element' => 'element',
     'preprocess functions' => [

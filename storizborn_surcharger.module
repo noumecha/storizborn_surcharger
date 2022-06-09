@@ -19,9 +19,14 @@ function storizborn_surcharger_preprocess_block__aggregator(&$vars){
   if (isset($vars['base_plugin_id']) && $vars['base_plugin_id'] == 'aggregator_feed_block' )
   {
     $vars['list'] = $vars['elements']['content']['list'];
+    $vars['list2'] = $vars['content']['list'];
+    $vars['list3'] = $vars['list'];
+    
     $vars['items'] = $vars['list']['#items'];
 
-    $vars['list']['#theme'] = 'storizborn_surcharger_aggregator';
+    $vars['list']['#theme'] = 'storizborn_surcharger$vars';
+    $vars['list2']['#theme'] = 'storizborn_surcharger_aggregator';
+    $vars['list3']['#theme'] = 'storizborn_surcharger_aggregator';
     
     dump($vars);
   }

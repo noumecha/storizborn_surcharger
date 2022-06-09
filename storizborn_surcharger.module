@@ -15,12 +15,12 @@
  */
 
 function storizborn_surcharger_preprocess_block__aggregator(&$vars){
-  $vars['list'] = $vars['elements']['content']['list'];
-  $vars['items'] = $vars['elements']['content']['list']['#items'];
+  //$vars['list'] = $vars['elements']['content']['list'];
+  //$vars['items'] = $vars['elements']['content']['list']['#items'];
 
   $vars['list']['#theme'] = 'storizborn_surcharger_aggregator';
 
-  dump($vars);
+  dump($vars['list']);
 }
 /**
  * 

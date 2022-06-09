@@ -18,6 +18,16 @@ function storizborn_surcharger_preprocess_block__aggregator(&$vars){
   $vars['items'] = $vars['elements']['content']['list']['#items'];
 
   $vars['list']['#theme'] = 'storizborn_surcharger_rss_theme';
+  $vars['list']['#attributes'] = [
+    'class' => [
+      'sn-bloc'
+    ]
+  ];
+  $vars['items']['#attributes'] = [
+    'class' => [
+      'nav-link'
+    ]
+  ];
 
 	dump($vars['list']);
 

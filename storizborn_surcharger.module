@@ -20,10 +20,10 @@ function storizborn_surcharger_preprocess_block__aggregator(&$vars){
   {
     $vars['list'] = $vars['elements']['content']['list'];
     $vars['items'] = $vars['list']['#items'];
-    
+
     $vars['list']['#theme'] = 'storizborn_surcharger_aggregator';
     
-    dump($vars['list']);
+    dump($vars);
   }
 
   //dump($vars);

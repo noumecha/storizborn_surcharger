@@ -1,2 +1,14 @@
 {% if content %}
+<ul{{ attributes.addClass('sn-list') }}>
+    {% for item in items %}
+        <li{{ item.attributes }}>
+		  	{% 
+				set link_classes = [
+					'nav-link'
+				]
+			%}
+            {{ link(item.title, item.url, {'class': link_classes}) }}
+        </li>
+    {% endfor %}
+</ul>
 {% endif %}

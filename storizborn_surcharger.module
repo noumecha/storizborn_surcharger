@@ -25,6 +25,14 @@ function storizborn_surcharger_preprocess_block__aggregator(&$vars){
 }
 /**
  * 
+ * implement hook_preprocess_HOOK for navigation
+ */
+function storizborn_surcharger_preprocess_book_navigation(&$vars)
+{
+  dump($vars);
+}
+/**
+ * 
  * implements hook_theme()
  * 
  */
@@ -34,6 +42,14 @@ function storizborn_surcharger_theme() {
     'render element' => 'element',
     'preprocess functions' => [
       'template_preprocess_storizborn_surcharger_aggregator'
+    ],
+    'file' => 'storizborn_surcharger.theme.inc'
+  ];
+   // pre-formatage pour la book navigation
+  $hooks['storizborn_surcharger_book_navigation'] = [
+    'render element' => 'element',
+    'preprocess functions' => [
+      'template_preprocess_storizborn_surcharger_book_navigation'
     ],
     'file' => 'storizborn_surcharger.theme.inc'
   ];

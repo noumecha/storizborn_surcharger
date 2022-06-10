@@ -24,7 +24,7 @@
       <h3>{{ title }}</h3>
     {%- endif -%}
     {%- if items -%}
-      <{{ list_type }}{{ attributes.addClass('list-groupd') }}>
+      <{{ list_type }}{{ attributes.addClass('puce-check') }}>
         {%- for item in items -%}
           <li{{ item.attributes.addClass('list-group-item') }}>{{ item.value }}</li>
         {%- endfor -%}

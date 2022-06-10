@@ -25,9 +25,9 @@ function storizborn_surcharger_preprocess_block__aggregator(&$vars){
 }
 /**
  * 
- * implement hook_preprocess_HOOK for navigation
+ * implement hook_entity_type_view() for navigation
  */
-function storizborn_surcharger_preprocess_book_navigation(&$vars)
+function storizborn_surcharger_book_navigation(&$vars)
 {
   dump($vars);
 }

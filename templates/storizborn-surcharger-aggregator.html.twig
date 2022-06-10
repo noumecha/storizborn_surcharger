@@ -7,7 +7,7 @@
 {% if items or empty %}
   <div{{ wrapper_attributes.addClass('item-list') }}>
     {% if items %}
-      <ul {{ attributes.addClass('puce-check') }}>
+      <ul {{ attributes.addClass('puce-check','text-justify','mt-5') }}>
         {% for item in items %}
           <li{{ item.attributes.addClass('nav-link') }}>{{ item }}</li>
         {% endfor %}

@@ -19,7 +19,7 @@
     {% if items %}
       <ul {{ attributes.addClass('puce-check') }}>
         {% for item in items %}
-          <li{{ item.attributes.addClass('list-group-item','nav-link') }}>{{ item }}</li>
+          <li{{ item.attributes.addClass('nav-link') }}>{{ item }}</li>
         {% endfor %}
       </ul>
     {% else %}

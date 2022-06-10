@@ -27,7 +27,7 @@ class StorizbornSurchargerSubscriber implements EventSubscriberInterface {
    *   The messenger.
    */
   public function __construct(MessengerInterface $messenger) {
-    $this->messenger = $messenger;
+    //$this->messenger = $messenger;
   }
 
   /**
@@ -37,7 +37,7 @@ class StorizbornSurchargerSubscriber implements EventSubscriberInterface {
    *   Response event.
    */
   public function onKernelRequest(GetResponseEvent $event) {
-    $this->messenger->addStatus(__FUNCTION__);
+    //$this->messenger->addStatus(__FUNCTION__);
   }
 
   /**
@@ -47,7 +47,7 @@ class StorizbornSurchargerSubscriber implements EventSubscriberInterface {
    *   Response event.
    */
   public function onKernelResponse(FilterResponseEvent $event) {
-    $this->messenger->addStatus(__FUNCTION__);
+    //$this->messenger->addStatus(__FUNCTION__);
   }
 
   /**

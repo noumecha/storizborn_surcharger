@@ -19,7 +19,7 @@
     {% if items %}
       <ul {{ attributes.addClass('puce-check') }}>
         {% for item in items %}
-          <li{{ item.attributes.addClass('list-group-item') }}>{{ item.value }}</li>
+          <li{{ item.attributes.addClass('list-group-item') }}>{{ item }}</li>
         {% endfor %}
       </ul>
     {% else %}

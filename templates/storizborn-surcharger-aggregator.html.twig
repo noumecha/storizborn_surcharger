@@ -19,14 +19,14 @@
   {%- set attributes = attributes.addClass('item-list__' ~ context.list_style) %}
 {% endif %}
 {% if items or empty -%}
-  <div{{ wrapper_attributes.addClass('puce-check') }}>
+  <div{{ wrapper_attributes.addClass('item-listfdssdfd') }}>
     {%- if title is not empty -%}
       <h3>{{ title }}</h3>
     {%- endif -%}
     {%- if items -%}
-      <{{ list_type }}{{ attributes.addClass('') }}>
+      <{{ list_type }}{{ attributes.addClass('list-groupdfsdfds') }}>
         {%- for item in items -%}
-          <li{{ item.attributes.addClass('') }}>{{ item.value }}</li>
+          <li{{ item.attributes.addClass('list-group-itemdfdsfd') }}>{{ item.value }}</li>
         {%- endfor -%}
       </{{ list_type }}>
     {%- else -%}

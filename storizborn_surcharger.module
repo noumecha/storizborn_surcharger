@@ -27,10 +27,12 @@ function storizborn_surcharger_preprocess_block__aggregator(&$vars){
  * 
  * implement template_preprocess_book_navigation() for navigation
  */
-function storizborn_surcharger_preprocess_book_navigation(&$vars)
+function storizborn_surcharger_preprocess_book_navigation($vars)
 {
-  $vars['theme_hook_original'] = 'storizborn_surcharger_bn';
-  dump($vars);
+  return  [
+    '#theme'=>'storizborn_surcharger_bn',
+    'element' => $vars
+  ];
 }
 /**
  * 

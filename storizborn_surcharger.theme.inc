@@ -8,5 +8,5 @@ function template_preprocess_storizborn_surcharger_aggregator(&$vars){
 // srucharge de la book pagination 
 function template_preprocess_storizborn_surcharger_bn(&$vars)
 {
-  //dump($vars);
+  dump($vars);
 }

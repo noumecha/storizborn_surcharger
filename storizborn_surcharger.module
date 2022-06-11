@@ -29,7 +29,7 @@ function storizborn_surcharger_preprocess_block__aggregator(&$vars){
  */
 function storizborn_surcharger_preprocess_book_navigation(&$vars)
 {
-  $vars['theme_hook_original'] = 'storizborn_surcharger_book_navigation';
+  $vars['theme_hook_original'] = 'storizborn_surcharger_bn';
   //dump($vars);
 }
 /**
@@ -46,10 +46,10 @@ function storizborn_surcharger_theme() {
     ],
     'file' => 'storizborn_surcharger.theme.inc'
   ];
-  $hooks['storizborn_surcharger_book_navigation'] = [
+  $hooks['storizborn_surcharger_bn'] = [
     'render element' => 'element',
     'preprocess functions' => [
-      'template_preprocess_storizborn_surcharger_book_navigation'
+      'template_preprocess_storizborn_surcharger_bn'
     ],
     'file' => 'storizborn_surcharger.theme.inc'
   ];

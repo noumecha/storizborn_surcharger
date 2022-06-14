@@ -34,7 +34,7 @@ function storizborn_surcharger_preprocess_container(&$vars)
     //$vars['attributes']['class'];
     array_push($vars['attributes']['class'], 'container');
   }
-  dump($vars);
+  //dump($vars);
 }
 /**
  * 

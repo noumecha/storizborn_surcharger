@@ -24,6 +24,14 @@ function storizborn_surcharger_preprocess_block__aggregator(&$vars){
   //dump($vars);
 }
 /**
+ * implement hook_preprocess_container 
+ * 
+ */
+function storizborn_surcharger_preprocess_container(&$vars)
+{
+  dump($vars);
+}
+/**
  * 
  * implement template_preprocess_book_navigation() for navigation
  */

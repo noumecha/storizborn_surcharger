@@ -31,7 +31,8 @@ function storizborn_surcharger_preprocess_container(&$vars)
 {
   if(isset($vars['theme_hook_original']) && $vars['theme_hook_original']== 'container')
   {
-    $vars['attributes']['class'] += 'container';
+    //$vars['attributes']['class'];
+    array_push($vars['attributes']['class'], 'container');
   }
   dump($vars);
 }

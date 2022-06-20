@@ -1,6 +1,7 @@
 <?php
 
 /**
+ *
  * @file
  * Primary module hooks for storizborn_surcharger module.
  *
@@ -9,49 +10,42 @@
  * @see https://www.drupal.org/node/2217931
  */
 
-
 /**
  * implement hook_preprocess_HOOK
  */
-
-function storizborn_surcharger_preprocess_block__aggregator(&$vars){
-
-  if (isset($vars['base_plugin_id']) && $vars['base_plugin_id'] == 'aggregator_feed_block' )
-  {
+function storizborn_surcharger_preprocess_block__aggregator(&$vars) {
+  if (isset($vars['base_plugin_id']) && $vars['base_plugin_id'] == 'aggregator_feed_block') {
     $vars['content']['list']['#theme'] = 'storizborn_surcharger_aggregator';
   }
-
-  //dump($vars);
+  
+  // dump($vars);
 }
+
 /**
- * implement hook_preprocess_container 
- * 
+ * implement hook_preprocess_container
  */
-function storizborn_surcharger_preprocess_container(&$vars)
-{
-  if(isset($vars['theme_hook_original']) && $vars['theme_hook_original'] == 'container')
-  {
-    //$vars['attributes']['class'];
+function storizborn_surcharger_preprocess_container(&$vars) {
+  if (isset($vars['theme_hook_original']) && $vars['theme_hook_original'] == 'container' && isset($vars['attributes']['class']) && is_array($vars['attributes']['class'])) {
     array_push($vars['attributes']['class'], 'container');
   }
-  //dump($vars);
 }
+
 /**
- * 
  * implement template_preprocess_book_navigation() for navigation
  */
-/*function storizborn_surcharger_preprocess_book_navigation($vars)
-{
-  dump($vars);
-  return  [
-    '#theme'=>'storizborn_surcharger_bn',
-    'element' => []
-  ];
-}*/
+/*
+ * function storizborn_surcharger_preprocess_book_navigation($vars)
+ * {
+ * dump($vars);
+ * return [
+ * '#theme'=>'storizborn_surcharger_bn',
+ * 'element' => []
+ * ];
+ * }
+ */
+
 /**
- * 
  * implements hook_theme()
- * 
  */
 function storizborn_surcharger_theme() {
   // pre-formatage pour les flux rss

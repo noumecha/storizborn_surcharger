@@ -25,10 +25,9 @@ function storizborn_surcharger_preprocess_block__aggregator(&$vars) {
  * implement hook_preprocess_container
  */
 function storizborn_surcharger_preprocess_container(&$vars) {
-
+  $vars['current_route'] = \Drupal::routeMatch()->getRouteName();
   if (isset($vars['theme_hook_original']) && $vars['theme_hook_original'] == 'container' && isset($vars['attributes']['class']) && is_array($vars['attributes']['class']) && $vars['current_route']=='view.actualites.page_1') {
     array_push($vars['attributes']['class'], 'container');
-    $vars['current_route'] = \Drupal::routeMatch()->getRouteName();
     //dump($vars);
   }
 }

@@ -28,6 +28,7 @@ function storizborn_surcharger_preprocess_container(&$vars) {
   if (isset($vars['theme_hook_original']) && $vars['theme_hook_original'] == 'container' && isset($vars['attributes']['class']) && is_array($vars['attributes']['class'])) {
     array_push($vars['attributes']['class'], 'container');
   }
+  dump(\Drupal::routeMatch()->getRouteName());
 }
 
 /**

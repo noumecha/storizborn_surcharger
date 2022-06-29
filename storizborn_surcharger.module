@@ -26,9 +26,14 @@ function storizborn_surcharger_preprocess_block__aggregator(&$vars) {
  */
 function storizborn_surcharger_preprocess_container(&$vars) {
   if (isset($vars['theme_hook_original']) && $vars['theme_hook_original'] == 'container' && isset($vars['attributes']['class']) && is_array($vars['attributes']['class'])) {
+<<<<<<< HEAD
     // array_push($vars['attributes']['class'], 'container');
+=======
+    array_push($vars['attributes']['class'], 'container');
+    $vars['route_name'] = \Drupal::routeMatch()->getRouteName();
+    dump($vars);
+>>>>>>> d24fb45c32ac4a57a2cbcd836c9a86d525fa6f2e
   }
-  //dump(\Drupal::routeMatch()->getRouteName());
 }
 
 /**

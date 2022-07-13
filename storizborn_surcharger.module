@@ -1,5 +1,7 @@
 <?php
 
+use \Drupal\Core\Form\FormStateInterface;
+
 /**
  *
  * @file
@@ -98,7 +100,9 @@ function storizborn_surcharger_preprocess_node(&$vars) {
  * implements hook_form_alter
  * 
  */
-function storizborn_surcharger_form_alter(&$form, &$form_state, &$form_id)
+function storizborn_surcharger_form_search_block_form_alter(&$form, FormStateInterface $form_state, $form_id)
 {
-  //dump($form['keys']);
+  $form['actions']['submit']['#access'] = FALSE;
+  $form['keys']['#attributes']['placeholder'] = t('noumel');
+  //dump($form);
 }

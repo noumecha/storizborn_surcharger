@@ -93,3 +93,12 @@ function storizborn_surcharger_preprocess_node(&$vars) {
   // }
   // }
 }
+/**
+ * 
+ * implements hook_form_alter
+ * 
+ */
+function storizborn_surcharger_form_alter(&$form, &$form_state, &$form_id)
+{
+  dump($form);
+}

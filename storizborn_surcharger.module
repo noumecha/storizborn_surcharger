@@ -25,10 +25,16 @@ function storizborn_surcharger_preprocess_block__aggregator(&$vars) {
  * implement hook_preprocess_container
  */
 function storizborn_surcharger_preprocess_container(&$vars) {
-  $vars['current_route'] = \Drupal::routeMatch()->getRouteName();
-  if (isset($vars['theme_hook_original']) && $vars['theme_hook_original'] == 'container' && isset($vars['attributes']['class']) && is_array($vars['attributes']['class']) && $vars['current_route']=='view.actualites.page_1') {
-    array_push($vars['attributes']['class'], 'container');
-    //dump($vars);
+  $routeName = \Drupal::routeMatch()->getRouteName();
+  if (isset($vars['theme_hook_original']) && $vars['theme_hook_original'] == 'container' && ($routeName == 'view.actualites.page_1' || $routeName == 'entity.taxonomy_term.canonical')) {
+    if (isset($vars['attributes']['class']) && is_array($vars['attributes']['class']))
+      array_push($vars['attributes']['class'], 'container');
+    else {
+      $vars['attributes']['class'] = [
+        'container'
+      ];
+    }
+    // dump($vars);
   }
 }
 
@@ -66,4 +72,24 @@ function storizborn_surcharger_theme() {
     'file' => 'storizborn_surcharger.theme.inc'
   ];
   return $hooks;
+}
+
+/**
+ * permet de changer l'utilisateur d'un node.
+ *
+ * @param array $vars
+ */
+function storizborn_surcharger_preprocess_node(&$vars) {
+  
+  // if (!empty($vars['elements']['#node'])) {
+  // /**
+  // *
+  // * @var \Drupal\node\Entity\Node $node
+  // */
+  // $node = $vars['elements']['#node'];
+  // if ($node->getOwnerId() != 1) {
+  // $node->setOwnerId(1);
+  // $node->save();
+  // }
+  // }
 }

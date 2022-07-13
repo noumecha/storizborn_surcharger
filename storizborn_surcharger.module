@@ -100,5 +100,5 @@ function storizborn_surcharger_preprocess_node(&$vars) {
  */
 function storizborn_surcharger_form_alter(&$form, &$form_state, &$form_id)
 {
-  dump($form);
+  //dump($form['keys']);
 }

@@ -103,6 +103,6 @@ function storizborn_surcharger_preprocess_node(&$vars) {
 function storizborn_surcharger_form_search_block_form_alter(&$form, FormStateInterface $form_state, $form_id)
 {
   $form['actions']['submit']['#access'] = FALSE;
-  $form['keys']['#attributes']['placeholder'] = t('noumel');
+  $form['keys']['#attributes']['placeholder'] = t('Entrez votre recherche ici');
   //dump($form);
 }

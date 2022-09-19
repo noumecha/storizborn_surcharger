@@ -50,7 +50,7 @@ class StorizbornArticle extends FormatageModelsSection {
     public function __construct(array $configuration, $plugin_id, $plugin_definition, StylesGroupManager $styles_group_manager) {
         // TODO Auto-generated method stub
         parent::__construct($configuration, $plugin_id, $plugin_definition, $styles_group_manager);
-        $this->pluginDefinition->set('icon', drupal_get_path('module', 'mit_models') . "/icones/sections/mit_models_blog_bg_section.png");
+        $this->pluginDefinition->set('icon', drupal_get_path('module', 'storizborn_surchager') . "/icones/sections/storizborn_surchager_article.png");
     }
     
     /**

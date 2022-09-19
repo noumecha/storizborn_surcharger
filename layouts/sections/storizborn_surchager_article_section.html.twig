@@ -1,0 +1,54 @@
+{% if content %}
+<div {{ attributes.addClass('st_article')}}>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="st_article__authored">
+                    {% if content.article_date %}
+                    <div {{ region_attributes.article_date.addClass('st_article__authored__date')}}>
+                        {{ content.article_date }}
+                    </div>
+                    {% endif %}
+                    &nbsp;
+                    <p>| by </p>
+                    &nbsp;
+                    {% if content.article_author %}
+                    <div {{ region_attributes.article_author.addClass('st_article__authored__name')}}>
+                        {{ content.article_author }}
+                    </div>
+                    {% endif %}
+                </div>
+                {% if content.article_title %}
+                <h4 {{ region_attributes.article_title.addClass('st_article__title')}}>
+                    {{ content.article_title }}
+                </h4>
+                {% endif %}
+                {% if content.article_content %}
+                <div {{ region_attributes.article_content.addClass('st_article__content')}} >
+                    {{ content.article_content }}
+                </div>
+                {% endif %}
+                <div class="st_article__more">
+                    <div class="st_article__more_icon">
+                        &rsaquo;
+                    </div>
+                    <p>
+                        &nbsp;
+                    </p>
+                    {% if content.articles_links %}
+                        {{ content.articles_links }}
+                    {% endif %}
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+            {% if content.articles_blocks %}
+            <div {{ region_attributes.articles_blocks.addClass('')}}>
+                {{ content.articles_blocks }}
+            </div>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}

@@ -10,12 +10,12 @@ use Drupal\formatage_models\Plugin\Layout\Sections\FormatageModelsSection;
  * A contact section layout from storizborn_surcharger
  *
  * @Layout(
- *   id = "storizborn_surchager_article_section",
+ *   id = "storizborn_surcharger_article_section",
  *   label = @Translation(" Storizborn : Article Section "),
- *   category = @Translation("storizborn_surchager"),
+ *   category = @Translation("storizborn_surcharger"),
  *   path = "layouts/sections",
- *   template = "storizborn_surchager_article_section",
- *   library = "storizborn_surchager/storizborn_surchager_article_section",
+ *   template = "storizborn_surcharger_article_section",
+ *   library = "storizborn_surchager/storizborn_surcharger_article_section",
  *   default_region = "article_date",
  *   regions = {
  *     "article_date" = {

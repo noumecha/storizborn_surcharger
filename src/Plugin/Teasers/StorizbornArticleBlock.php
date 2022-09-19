@@ -7,7 +7,7 @@ use Drupal\formatage_models\FormatageModelsThemes;
 use Drupal\formatage_models\Plugin\Layout\Teasers\FormatageModelsTeasers;
 
 /**
- * A custom teaser from mit_models module
+ * A custom teaser from storizborn_surcharger module
  *
  * @Layout(
  *   id = "storizborn_surcharger_article_block",

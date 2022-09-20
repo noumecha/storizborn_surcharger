@@ -1,6 +1,6 @@
 name: storizborn_surcharger
 type: module
-description: a module for surcharge some item from stroriborn site
+description: a special module for storizborn website
 package: Custom
 core: 8.x
 core_version_requirement: ^8 || ^9

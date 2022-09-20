@@ -14,5 +14,8 @@
             "email": "noumechaivan@gmail.com"
         }
     ],
-    "require": {}
+    "minimum-stability": "dev",
+    "require": {
+        "stephane888/formatage_models": "dev-3x | ^3.1"
+    }
 }

@@ -11,7 +11,7 @@ use Drupal\formatage_models\Plugin\Layout\Teasers\FormatageModelsTeasers;
  *
  * @Layout(
  *   id = "storizborn_surcharger_article_block",
- *   label = @Translation(" Mit_Models : Hero Teaser "),
+ *   label = @Translation(" Storizborn Surcharger : Article Block  "),
  *   category = @Translation("mit_models"),
  *   path = "layouts/teasers",
  *   template = "storizborn_surcharger_article_block",
@@ -37,7 +37,7 @@ class StorizbornArticleBlock extends FormatageModelsTeasers {
     public function __construct(array $configuration, $plugin_id, $plugin_definition, StylesGroupManager $styles_group_manager) {
         // TODO Auto-generated method stub
         parent::__construct($configuration, $plugin_id, $plugin_definition, $styles_group_manager);
-        $this->pluginDefinition->set('icon', drupal_get_path('module', 'storizborn_surchager') . "/icones/teasers/storizborn_surchager_article_block.png");
+        $this->pluginDefinition->set('icon', drupal_get_path('module', 'storizborn_surcharger') . "/icones/teasers/storizborn_surcharger_article_block.png");
     }
   
     /**

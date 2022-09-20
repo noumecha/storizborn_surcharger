@@ -9,9 +9,9 @@
                         {{ content.article_date }}
                     </div>
                     {% endif %}
-                    &nbsp;
-                    <p>| by </p>
-                    &nbsp;
+                    <div class="st_article__authored__space">
+                        |
+                    </div>
                     {% if content.article_author %}
                     <div {{ region_attributes.article_author.addClass('st_article__authored__name')}}>
                         {{ content.article_author }}

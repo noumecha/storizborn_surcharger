@@ -24,6 +24,31 @@ function storizborn_surcharger_preprocess_block__aggregator(&$vars) {
 }
 
 /**
+ * 
+ * implement hook_preprocess_menu
+ * this for change the viewer of the tools menu
+ * 
+ */
+function storizborn_surcharger_preprocess_menu(&$vars) {
+  if (isset($vars['theme_hook_original']) && $vars['theme_hook_orginal'] = 'menu__tools'){
+    if($vars['menu_name'] == 'tools'){
+      $vars['attributes']['class']=['st_block__items_menu'];
+    }
+    foreach($vars['items'] as $item)
+    {
+      /**
+       *
+       * @var \Drupal\Core\Template\Attribute $attribute
+       */
+      $attribute = $item['attributes'];
+      $attribute->addClass('st_block__items');
+    }
+    //dump($vars['items']);
+  }  
+
+}
+
+/**
  * implement hook_preprocess_container
  */
 function storizborn_surcharger_preprocess_container(&$vars) {
@@ -66,6 +91,7 @@ function storizborn_surcharger_theme() {
     ],
     'file' => 'storizborn_surcharger.theme.inc'
   ];
+  // pre-formatage pour le ...
   $hooks['storizborn_surcharger_bn'] = [
     'render element' => 'element',
     'preprocess functions' => [

@@ -35,3 +35,19 @@ vuejs:
     gpl-compatible: true
   js:
     https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js: {type: external, minified: true}
+
+# custom libraries for sections
+storizborn_surcharger_article_section:
+  js:
+    layouts/js/storizborn_surcharger_article_section.js: {}
+  css:
+    theme:
+      layouts/css/storizborn_surcharger_article_section.css: {}
+
+# custom libraries for teasers
+storizborn_surcharger_article_block:
+  js:
+    layouts/js/storizborn_surcharger_article_block.js: {}
+  css:
+    theme:
+      layouts/css/storizborn_surcharger_article_block.css: {}
